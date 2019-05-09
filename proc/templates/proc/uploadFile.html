@@ -1,0 +1,11 @@
+{% extends 'proc/base.html' %}
+{% load static %}
+{% block content %}
+	<form action="/main/uploadfile/" method="POST" >
+		{% csrf_token %}
+		{{ form }}
+		<button type="submit" >
+			upload
+		</button>	
+	</form>
+{% endblock %}
