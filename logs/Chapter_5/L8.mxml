@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- MXML version 1.1 -->
+<!-- Created by ProM Import Framework, Version 7.0 (Propeller) -->
+<!-- via MXMLib Version 1.9 (http://promimport.sf.net/) -->
+<!-- (c) 2004-2007 C.W. Guenther (christian@deckfour.org); Eindhoven Technical University -->
+<!-- This event log is formatted in MXML, for use by BPI and Process Mining Tools. -->
+<!-- You can load this file e.g. in the ProM Framework for Process Mining. -->
+<!-- More information about MXML, Process Mining, and ProM: http://www.processmining.org/. -->
+<WorkflowLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://is.tm.tue.nl/research/processmining/WorkflowLog.xsd">
+	<Data>
+		<Attribute name="app.name">ProM Import Framework</Attribute>
+		<Attribute name="app.version">7.0 (Propeller)</Attribute>
+		<Attribute name="java.vendor">Sun Microsystems Inc.</Attribute>
+		<Attribute name="java.version">1.6.0_19</Attribute>
+		<Attribute name="mxml.creator">MXMLib (http://promimport.sf.net/)</Attribute>
+		<Attribute name="mxml.version">1.1</Attribute>
+		<Attribute name="os.arch">x86</Attribute>
+		<Attribute name="os.name">Windows 7</Attribute>
+		<Attribute name="os.version">6.1</Attribute>
+		<Attribute name="user.name">WVDAALST</Attribute>
+	</Data>
+	<Source program="Rapid Synthesizer"/>
+	<Process id="L8">
+		<ProcessInstance id="Case3.0">
+			<AuditTrailEntry>
+				<WorkflowModelElement>a</WorkflowModelElement>
+				<EventType>complete</EventType>
+				<Timestamp>2010-10-27T22:31:19.557+02:00</Timestamp>
+				<Originator>UNDEFINED</Originator>
+			</AuditTrailEntry>
+			<AuditTrailEntry>
+				<WorkflowModelElement>b</WorkflowModelElement>
+				<EventType>complete</EventType>
+				<Timestamp>2010-10-27T22:32:19.557+02:00</Timestamp>
+				<Originator>UNDEFINED</Originator>
+			</AuditTrailEntry>
+			<AuditTrailEntry>
+				<WorkflowModelElement>c</WorkflowModelElement>
+				<EventType>complete</EventType>
+				<Timestamp>2010-10-27T22:33:19.557+02:00</Timestamp>
+				<Originator>UNDEFINED</Originator>
+			</AuditTrailEntry>
+			<AuditTrailEntry>
+				<WorkflowModelElement>b</WorkflowModelElement>
+				<EventType>complete</EventType>
+				<Timestamp>2010-10-27T22:34:19.557+02:00</Timestamp>
+				<Originator>UNDEFINED</Originator>
+			</AuditTrailEntry>
+			<AuditTrailEntry>
+				<WorkflowModelElement>c</WorkflowModelElement>
+				<EventType>complete</EventType>
+				<Timestamp>2010-10-27T22:35:19.557+02:00</Timestamp>
+				<Originator>UNDEFINED</Originator>
+			</AuditTrailEntry>
+			<AuditTrailEntry>
+				<WorkflowModelElement>b</WorkflowModelElement>
+				<EventType>complete</EventType>
+				<Timestamp>2010-10-27T22:36:19.557+02:00</Timestamp>
+				<Originator>UNDEFINED</Originator>
+			</AuditTrailEntry>
+			<AuditTrailEntry>
+				<WorkflowModelElement>d</WorkflowModelElement>
+				<EventType>complete</EventType>
+				<Timestamp>2010-10-27T22:37:19.557+02:00</Timestamp>
+				<Originator>UNDEFINED</Originator>
+			</AuditTrailEntry>
+		</ProcessInstance>
+		<ProcessInstance id="Case2.0">
+			<AuditTrailEntry>
+				<WorkflowModelElement>a</WorkflowModelElement>
+				<EventType>complete</EventType>
+				<Timestamp>2010-10-27T22:31:19.557+02:00</Timestamp>
+				<Originator>UNDEFINED</Originator>
+			</AuditTrailEntry>
+			<AuditTrailEntry>
+				<WorkflowModelElement>b</WorkflowModelElement>
+				<EventType>complete</EventType>
+				<Timestamp>2010-10-27T22:32:19.557+02:00</Timestamp>
+				<Originator>UNDEFINED</Originator>
+			</AuditTrailEntry>
+			<AuditTrailEntry>
+				<WorkflowModelElement>c</WorkflowModelElement>
+				<EventType>complete</EventType>
+				<Timestamp>2010-10-27T22:33:19.557+02:00</Timestamp>
+				<Originator>UNDEFINED</Originator>
+			</AuditTrailEntry>
+			<AuditTrailEntry>
+				<WorkflowModelElement>b</WorkflowModelElement>
+				<EventType>complete</EventType>
+				<Timestamp>2010-10-27T22:34:19.557+02:00</Timestamp>
+				<Originator>UNDEFINED</Originator>
+			</AuditTrailEntry>
+			<AuditTrailEntry>
+				<WorkflowModelElement>d</WorkflowModelElement>
+				<EventType>complete</EventType>
+				<Timestamp>2010-10-27T22:35:19.557+02:00</Timestamp>
+				<Originator>UNDEFINED</Originator>
+			</AuditTrailEntry>
+		</ProcessInstance>
+		<ProcessInstance id="Case1.2">
+			<AuditTrailEntry>
+				<WorkflowModelElement>a</WorkflowModelElement>
+				<EventType>complete</EventType>
+				<Timestamp>2010-10-27T22:31:19.557+02:00</Timestamp>
+				<Originator>UNDEFINED</Originator>
+			</AuditTrailEntry>
+			<AuditTrailEntry>
+				<WorkflowModelElement>b</WorkflowModelElement>
+				<EventType>complete</EventType>
+				<Timestamp>2010-10-27T22:32:19.557+02:00</Timestamp>
+				<Originator>UNDEFINED</Originator>
+			</AuditTrailEntry>
+			<AuditTrailEntry>
+				<WorkflowModelElement>d</WorkflowModelElement>
+				<EventType>complete</EventType>
+				<Timestamp>2010-10-27T22:33:19.557+02:00</Timestamp>
+				<Originator>UNDEFINED</Originator>
+			</AuditTrailEntry>
+		</ProcessInstance>
+		<ProcessInstance id="Case1.1">
+			<AuditTrailEntry>
+				<WorkflowModelElement>a</WorkflowModelElement>
+				<EventType>complete</EventType>
+				<Timestamp>2010-10-27T22:31:19.557+02:00</Timestamp>
+				<Originator>UNDEFINED</Originator>
+			</AuditTrailEntry>
+			<AuditTrailEntry>
+				<WorkflowModelElement>b</WorkflowModelElement>
+				<EventType>complete</EventType>
+				<Timestamp>2010-10-27T22:32:19.557+02:00</Timestamp>
+				<Originator>UNDEFINED</Originator>
+			</AuditTrailEntry>
+			<AuditTrailEntry>
+				<WorkflowModelElement>d</WorkflowModelElement>
+				<EventType>complete</EventType>
+				<Timestamp>2010-10-27T22:33:19.557+02:00</Timestamp>
+				<Originator>UNDEFINED</Originator>
+			</AuditTrailEntry>
+		</ProcessInstance>
+		<ProcessInstance id="Case1.0">
+			<AuditTrailEntry>
+				<WorkflowModelElement>a</WorkflowModelElement>
+				<EventType>complete</EventType>
+				<Timestamp>2010-10-27T22:31:19.557+02:00</Timestamp>
+				<Originator>UNDEFINED</Originator>
+			</AuditTrailEntry>
+			<AuditTrailEntry>
+				<WorkflowModelElement>b</WorkflowModelElement>
+				<EventType>complete</EventType>
+				<Timestamp>2010-10-27T22:32:19.557+02:00</Timestamp>
+				<Originator>UNDEFINED</Originator>
+			</AuditTrailEntry>
+			<AuditTrailEntry>
+				<WorkflowModelElement>d</WorkflowModelElement>
+				<EventType>complete</EventType>
+				<Timestamp>2010-10-27T22:33:19.557+02:00</Timestamp>
+				<Originator>UNDEFINED</Originator>
+			</AuditTrailEntry>
+		</ProcessInstance>
+		<ProcessInstance id="Case2.1">
+			<AuditTrailEntry>
+				<WorkflowModelElement>a</WorkflowModelElement>
+				<EventType>complete</EventType>
+				<Timestamp>2010-10-27T22:31:19.557+02:00</Timestamp>
+				<Originator>UNDEFINED</Originator>
+			</AuditTrailEntry>
+			<AuditTrailEntry>
+				<WorkflowModelElement>b</WorkflowModelElement>
+				<EventType>complete</EventType>
+				<Timestamp>2010-10-27T22:32:19.557+02:00</Timestamp>
+				<Originator>UNDEFINED</Originator>
+			</AuditTrailEntry>
+			<AuditTrailEntry>
+				<WorkflowModelElement>c</WorkflowModelElement>
+				<EventType>complete</EventType>
+				<Timestamp>2010-10-27T22:33:19.557+02:00</Timestamp>
+				<Originator>UNDEFINED</Originator>
+			</AuditTrailEntry>
+			<AuditTrailEntry>
+				<WorkflowModelElement>b</WorkflowModelElement>
+				<EventType>complete</EventType>
+				<Timestamp>2010-10-27T22:34:19.557+02:00</Timestamp>
+				<Originator>UNDEFINED</Originator>
+			</AuditTrailEntry>
+			<AuditTrailEntry>
+				<WorkflowModelElement>d</WorkflowModelElement>
+				<EventType>complete</EventType>
+				<Timestamp>2010-10-27T22:35:19.557+02:00</Timestamp>
+				<Originator>UNDEFINED</Originator>
+			</AuditTrailEntry>
+		</ProcessInstance>
+	</Process>
+</WorkflowLog>
