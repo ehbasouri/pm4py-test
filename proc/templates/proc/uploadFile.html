@@ -1,11 +1,16 @@
 {% extends 'proc/base.html' %}
 {% load static %}
 {% block content %}
-	<form action="/main/uploadfile/" method="POST" >
-		{% csrf_token %}
-		{{ form }}
-		<button type="submit" >
-			upload
-		</button>	
-	</form>
+	<div class="center" style="height: 90vh" >
+		<div class="confirm-class" >
+			<form action="/main/uploadfile/" method="POST" enctype="multipart/form-data" >
+				{% csrf_token %}
+				{{ form }}
+				<br>
+				<button class="btn btn-primary" style="margin-top: 20px" type="submit" >
+					upload
+				</button>	
+			</form>
+		</div>
+	</div>
 {% endblock %}

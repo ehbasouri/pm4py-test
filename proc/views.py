@@ -2,17 +2,20 @@ from django.shortcuts import render
 from .forms import UploadFileForm
 from django.http import HttpResponseRedirect
 import os
+from django.core.files.storage import FileSystemStorage
 
 #handle input
 
 def handle_uploaded_file(f):
-	print(f)
-    # with open('some/file/name.txt', 'wb+') as destination:
-    #     for chunk in f.chunks():
-    #         destination.write(chunk)
+	# os.remove('static/proc/model.png')
+	fs= FileSystemStorage()
+	fs.save('model.png', f)
+
+	# get_model()
+
 def get_model():
-	print('model!!!!')
-	os.rename("/home/ehsan/codes/test/test2/ehsan.png", "/home/ehsan/codes/test/test1/test.txt")
+	os.rename("//home/ehsan/codes/pm4py-test/media/model.png", "/home/ehsan/codes/pm4py-test/proc/static/proc/model.png")
+
 # views !!!
 
 def main_view(request):
@@ -29,13 +32,7 @@ def upload_file(request):
 	    form = UploadFileForm(request.POST, request.FILES)
 	    # get_model()
 	    if form.is_valid():
-	    	# print('fileeeeee')
-	    	# print(request.FILES['file'])
-	        # handle_uploaded_file(request.FILES['file'])
-	        print('file')
-	        print(request.FILES['file'])
-	        return HttpResponseRedirect('/main/home/')
-	    else:
+	        handle_uploaded_file(request.FILES['file'])
 	        return HttpResponseRedirect('/main/confirm/')
 	else:
 		# print('not valid !!!')
