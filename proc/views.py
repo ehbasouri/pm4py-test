@@ -15,7 +15,7 @@ from pm4py.algo.discovery.dfg import factory as dfg_miner
 
 #handle input
 
-def handle_uploaded_file(f):
+def handle_uploaded_file(f, algorithm):
 
     logPath2='/home/pm4py_test/logs/log.xes'
     logPath1='/home/pm4py_test/media/log.xes'
@@ -25,7 +25,19 @@ def handle_uploaded_file(f):
     move_file(logPath1,logPath2)
 
     log = xes_importer.import_log(logPath2)
-    net, initial_marking, final_marking = heuristics_miner.apply(log)
+    if algorithm=="alpha":
+        print(algorithm)
+        net, initial_marking, final_marking = heuristics_miner.apply(log)
+    elif algorithm == "inductive":
+        print(algorithm)
+        net, initial_marking, final_marking = inductive_miner.apply(log)
+    elif algorithm == "heuristics":
+        print(algorithm)
+        net, initial_marking, final_marking = heuristics_miner.apply(log)
+    else:
+        print('error !!!')
+        print(algorithm)
+        return
     gviz = vis_factory.apply(net, initial_marking, final_marking)
     vis_factory.view(gviz)
     pngUris= glob.glob('/home/pm4py_test/*.png')
@@ -59,33 +71,32 @@ def upload_file_alpha(request):
 	    form = UploadFileForm(request.POST, request.FILES)
 	    # get_model()
 	    if form.is_valid():
-	        handle_uploaded_file(request.FILES['file'])
+	        handle_uploaded_file(request.FILES['file'],"alpha")
 	        return HttpResponseRedirect('/main/confirm/')
 	else:
-		# print('not valid !!!')
 	    form = UploadFileForm()
-	return render(request, 'proc/uploadFile.html', { "form": form, "image": "proc/test.png" })
+	return render(request, 'proc/uploadFile.html', { "form": form, "action": "/main/uploadfilealpha/" })
 
 def upload_file_inductive(request):
     if request.method == 'POST':
         form = UploadFileForm(request.POST, request.FILES)
         # get_model()
         if form.is_valid():
-            handle_uploaded_file(request.FILES['file'])
+            handle_uploaded_file(request.FILES['file'],"inductive")
             return HttpResponseRedirect('/main/confirm/')
     else:
         # print('not valid !!!')
         form = UploadFileForm()
-    return render(request, 'proc/uploadFile.html', { "form": form, "image": "proc/test.png" })
+    return render(request, 'proc/uploadFile.html', { "form": form, "action":"/main/uploadfileinductive/" })
 
 def upload_file_heuristics(request):
     if request.method == 'POST':
         form = UploadFileForm(request.POST, request.FILES)
         # get_model()
         if form.is_valid():
-            handle_uploaded_file(request.FILES['file'])
+            handle_uploaded_file(request.FILES['file'],"heuristics")
             return HttpResponseRedirect('/main/confirm/')
     else:
         # print('not valid !!!')
         form = UploadFileForm()
-    return render(request, 'proc/uploadFile.html', { "form": form, "image": "proc/test.png" })
+    return render(request, 'proc/uploadFile.html', { "form": form, "action":"/main/uploadfileheuristics/" })
