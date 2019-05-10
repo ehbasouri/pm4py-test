@@ -1,0 +1,155 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<pnml>
+  <net id="net1" type="http://www.pnml.org/version-2009/grammar/pnmlcoremodel">
+    <page id="n0">
+      <place id="p_8">
+        <name>
+          <text>p_8</text>
+        </name>
+      </place>
+      <place id="p_4">
+        <name>
+          <text>p_4</text>
+        </name>
+      </place>
+      <place id="p_11">
+        <name>
+          <text>p_11</text>
+        </name>
+      </place>
+      <place id="p_5">
+        <name>
+          <text>p_5</text>
+        </name>
+      </place>
+      <place id="sink">
+        <name>
+          <text>sink</text>
+        </name>
+      </place>
+      <place id="p_6">
+        <name>
+          <text>p_6</text>
+        </name>
+      </place>
+      <place id="p_3">
+        <name>
+          <text>p_3</text>
+        </name>
+      </place>
+      <place id="p_7">
+        <name>
+          <text>p_7</text>
+        </name>
+      </place>
+      <place id="p_9">
+        <name>
+          <text>p_9</text>
+        </name>
+      </place>
+      <place id="source">
+        <name>
+          <text>source</text>
+        </name>
+        <initialMarking>
+          <text>1</text>
+        </initialMarking>
+      </place>
+      <place id="p_10">
+        <name>
+          <text>p_10</text>
+        </name>
+      </place>
+      <transition id="tauSplit_2">
+        <name>
+          <text>tauSplit_2</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="d3eb4bdb-5df4-4d46-b97b-5e50909af96e"/>
+      </transition>
+      <transition id="check ticket">
+        <name>
+          <text>check ticket</text>
+        </name>
+      </transition>
+      <transition id="tauJoin_3">
+        <name>
+          <text>tauJoin_3</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="f811075e-0191-479e-8958-a95147bc0976"/>
+      </transition>
+      <transition id="register request">
+        <name>
+          <text>register request</text>
+        </name>
+      </transition>
+      <transition id="examine thoroughly">
+        <name>
+          <text>examine thoroughly</text>
+        </name>
+      </transition>
+      <transition id="reinitiate request">
+        <name>
+          <text>reinitiate request</text>
+        </name>
+      </transition>
+      <transition id="pay compensation">
+        <name>
+          <text>pay compensation</text>
+        </name>
+      </transition>
+      <transition id="decide">
+        <name>
+          <text>decide</text>
+        </name>
+      </transition>
+      <transition id="examine casually">
+        <name>
+          <text>examine casually</text>
+        </name>
+      </transition>
+      <transition id="reject request">
+        <name>
+          <text>reject request</text>
+        </name>
+      </transition>
+      <transition id="loop_1">
+        <name>
+          <text>loop_1</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="6dacf89f-589c-4294-8678-bb3993836be5"/>
+      </transition>
+      <transition id="skip_4">
+        <name>
+          <text>skip_4</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="02886aae-4d86-4679-93eb-c511ae43ba27"/>
+      </transition>
+      <arc id="-9223371957135629694" source="decide" target="p_5"/>
+      <arc id="79719136902" source="register request" target="p_3"/>
+      <arc id="-9223371957135629680" source="p_5" target="reinitiate request"/>
+      <arc id="79719146132" source="reinitiate request" target="p_11"/>
+      <arc id="-9223371957135629666" source="p_5" target="skip_4"/>
+      <arc id="79719146146" source="skip_4" target="p_4"/>
+      <arc id="-9223371957135629659" source="p_11" target="loop_1"/>
+      <arc id="-9223371957135629785" source="p_3" target="tauSplit_2"/>
+      <arc id="79719146153" source="loop_1" target="p_3"/>
+      <arc id="-9223371957135629778" source="tauJoin_3" target="p_6"/>
+      <arc id="-9223371957135629645" source="p_4" target="pay compensation"/>
+      <arc id="79719146167" source="pay compensation" target="sink"/>
+      <arc id="-9223371957135629764" source="tauSplit_2" target="p_7"/>
+      <arc id="79719146174" source="p_4" target="reject request"/>
+      <arc id="-9223371957135629631" source="reject request" target="sink"/>
+      <arc id="79719146055" source="p_8" target="tauJoin_3"/>
+      <arc id="79719146062" source="p_7" target="check ticket"/>
+      <arc id="-9223371957135629743" source="check ticket" target="p_8"/>
+      <arc id="79719146076" source="tauSplit_2" target="p_9"/>
+      <arc id="-9223371957135629722" source="p_10" target="tauJoin_3"/>
+      <arc id="79719146090" source="p_6" target="decide"/>
+      <arc id="79719137007" source="source" target="register request"/>
+      <arc id="79719146097" source="p_9" target="examine thoroughly"/>
+      <arc id="-9223371957135629708" source="examine thoroughly" target="p_10"/>
+      <arc id="-9223371957135629701" source="p_9" target="examine casually"/>
+      <arc id="79719146111" source="examine casually" target="p_10"/>
+    </page>
+  </net>
+</pnml>

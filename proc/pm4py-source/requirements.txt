@@ -1,0 +1,15 @@
+pyvis
+networkx>=2.2
+matplotlib==2.2.2
+numpy
+ciso8601
+cvxopt
+lxml
+graphviz
+pyarrow
+pandas>=0.24.1
+scipy
+pydotplus
+scikit-learn
+pulp
+pytz>=2018.9

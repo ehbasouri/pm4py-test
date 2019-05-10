@@ -1,0 +1,69 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<pnml>
+  <net id="net1" type="http://www.pnml.org/version-2009/grammar/pnmlcoremodel">
+    <page id="n0">
+      <place id="start">
+        <name>
+          <text>start</text>
+        </name>
+        <initialMarking>
+          <text>1</text>
+        </initialMarking>
+      </place>
+      <place id="end">
+        <name>
+          <text>end</text>
+        </name>
+      </place>
+      <place id="({'Unmatched+Unmatched'}, {'Completed+Closed'})">
+        <name>
+          <text>({'Unmatched+Unmatched'}, {'Completed+Closed'})</text>
+        </name>
+      </place>
+      <transition id="Accepted+Wait">
+        <name>
+          <text>Accepted+Wait</text>
+        </name>
+      </transition>
+      <transition id="Queued+Awaiting Assignment">
+        <name>
+          <text>Queued+Awaiting Assignment</text>
+        </name>
+      </transition>
+      <transition id="Completed+Closed">
+        <name>
+          <text>Completed+Closed</text>
+        </name>
+      </transition>
+      <transition id="Accepted+Assigned">
+        <name>
+          <text>Accepted+Assigned</text>
+        </name>
+      </transition>
+      <transition id="Unmatched+Unmatched">
+        <name>
+          <text>Unmatched+Unmatched</text>
+        </name>
+      </transition>
+      <transition id="Completed+Cancelled">
+        <name>
+          <text>Completed+Cancelled</text>
+        </name>
+      </transition>
+      <transition id="Accepted+In Progress">
+        <name>
+          <text>Accepted+In Progress</text>
+        </name>
+      </transition>
+      <arc id="-9223371957234581181" source="({'Unmatched+Unmatched'}, {'Completed+Closed'})" target="Completed+Closed"/>
+      <arc id="-9223371957234581209" source="Completed+Closed" target="end"/>
+      <arc id="79593472264" source="start" target="Accepted+In Progress"/>
+      <arc id="79620194631" source="Unmatched+Unmatched" target="({'Unmatched+Unmatched'}, {'Completed+Closed'})"/>
+      <arc id="-9223371957234581202" source="start" target="Accepted+Wait"/>
+      <arc id="79620194610" source="start" target="Queued+Awaiting Assignment"/>
+      <arc id="-9223371957234581195" source="start" target="Completed+Closed"/>
+      <arc id="79620194617" source="start" target="Accepted+Assigned"/>
+      <arc id="-9223371957234581188" source="start" target="Unmatched+Unmatched"/>
+    </page>
+  </net>
+</pnml>

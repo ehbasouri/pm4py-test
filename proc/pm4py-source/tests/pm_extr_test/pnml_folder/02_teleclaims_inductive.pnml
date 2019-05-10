@@ -1,0 +1,398 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<pnml>
+  <net id="net1" type="http://www.pnml.org/version-2009/grammar/pnmlcoremodel">
+    <page id="n0">
+      <place id="p_9">
+        <name>
+          <text>p_9</text>
+        </name>
+      </place>
+      <place id="p_21">
+        <name>
+          <text>p_21</text>
+        </name>
+      </place>
+      <place id="p_13">
+        <name>
+          <text>p_13</text>
+        </name>
+      </place>
+      <place id="p_6">
+        <name>
+          <text>p_6</text>
+        </name>
+      </place>
+      <place id="p_17">
+        <name>
+          <text>p_17</text>
+        </name>
+      </place>
+      <place id="p_18">
+        <name>
+          <text>p_18</text>
+        </name>
+      </place>
+      <place id="source">
+        <name>
+          <text>source</text>
+        </name>
+        <initialMarking>
+          <text>1</text>
+        </initialMarking>
+      </place>
+      <place id="p_19">
+        <name>
+          <text>p_19</text>
+        </name>
+      </place>
+      <place id="p_10">
+        <name>
+          <text>p_10</text>
+        </name>
+      </place>
+      <place id="p_14">
+        <name>
+          <text>p_14</text>
+        </name>
+      </place>
+      <place id="p_20">
+        <name>
+          <text>p_20</text>
+        </name>
+      </place>
+      <place id="p_11">
+        <name>
+          <text>p_11</text>
+        </name>
+      </place>
+      <place id="p_7">
+        <name>
+          <text>p_7</text>
+        </name>
+      </place>
+      <place id="p_15">
+        <name>
+          <text>p_15</text>
+        </name>
+      </place>
+      <place id="p_3">
+        <name>
+          <text>p_3</text>
+        </name>
+      </place>
+      <place id="p_12">
+        <name>
+          <text>p_12</text>
+        </name>
+      </place>
+      <place id="p_8">
+        <name>
+          <text>p_8</text>
+        </name>
+      </place>
+      <place id="p_16">
+        <name>
+          <text>p_16</text>
+        </name>
+      </place>
+      <place id="sink">
+        <name>
+          <text>sink</text>
+        </name>
+      </place>
+      <place id="p_4">
+        <name>
+          <text>p_4</text>
+        </name>
+      </place>
+      <place id="p_5">
+        <name>
+          <text>p_5</text>
+        </name>
+      </place>
+      <transition id="S register claim+complete">
+        <name>
+          <text>S register claim+complete</text>
+        </name>
+      </transition>
+      <transition id="determine likelihood of claim+start">
+        <name>
+          <text>determine likelihood of claim+start</text>
+        </name>
+      </transition>
+      <transition id="loop_13">
+        <name>
+          <text>loop_13</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="3d63bfe7-6d21-419e-9776-be2001240395"/>
+      </transition>
+      <transition id="skip_16">
+        <name>
+          <text>skip_16</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="24b84fb3-0967-4309-b8aa-dedc3b1e2683"/>
+      </transition>
+      <transition id="skip_1">
+        <name>
+          <text>skip_1</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="c43fe713-bdd4-4e48-9bcd-574d8d87c482"/>
+      </transition>
+      <transition id="S check if sufficient information is available+complete">
+        <name>
+          <text>S check if sufficient information is available+complete</text>
+        </name>
+      </transition>
+      <transition id="skip_5">
+        <name>
+          <text>skip_5</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="697bf780-9ba3-4058-9a72-febaa9205168"/>
+      </transition>
+      <transition id="skip_9">
+        <name>
+          <text>skip_9</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="0115d1f2-4467-4d1d-982b-20340db2c3d5"/>
+      </transition>
+      <transition id="skip_2">
+        <name>
+          <text>skip_2</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="be043895-f418-4c3a-8a8e-4e42f52c38c8"/>
+      </transition>
+      <transition id="initiate payment+start">
+        <name>
+          <text>initiate payment+start</text>
+        </name>
+      </transition>
+      <transition id="skip_17">
+        <name>
+          <text>skip_17</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="8efb6d63-201c-4a5e-a422-930940e02800"/>
+      </transition>
+      <transition id="B check if sufficient information is available+complete">
+        <name>
+          <text>B check if sufficient information is available+complete</text>
+        </name>
+      </transition>
+      <transition id="determine likelihood of claim+complete">
+        <name>
+          <text>determine likelihood of claim+complete</text>
+        </name>
+      </transition>
+      <transition id="skip_14">
+        <name>
+          <text>skip_14</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="00c94c33-38ed-4dff-bb01-37a909a5d3cb"/>
+      </transition>
+      <transition id="end+start">
+        <name>
+          <text>end+start</text>
+        </name>
+      </transition>
+      <transition id="skip_6">
+        <name>
+          <text>skip_6</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="e67c2766-a897-4924-8408-52e5ca7ab5e3"/>
+      </transition>
+      <transition id="skip_10">
+        <name>
+          <text>skip_10</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="228526bf-c3d4-4039-bc0b-7ec621e0b712"/>
+      </transition>
+      <transition id="end+complete">
+        <name>
+          <text>end+complete</text>
+        </name>
+      </transition>
+      <transition id="initiate payment+complete">
+        <name>
+          <text>initiate payment+complete</text>
+        </name>
+      </transition>
+      <transition id="B register claim+start">
+        <name>
+          <text>B register claim+start</text>
+        </name>
+      </transition>
+      <transition id="S register claim+start">
+        <name>
+          <text>S register claim+start</text>
+        </name>
+      </transition>
+      <transition id="assess claim+start">
+        <name>
+          <text>assess claim+start</text>
+        </name>
+      </transition>
+      <transition id="skip_15">
+        <name>
+          <text>skip_15</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="dfc0d8e2-9b2c-48e3-9f99-9f27591ba24c"/>
+      </transition>
+      <transition id="skip_7">
+        <name>
+          <text>skip_7</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="760a4a0c-5306-450e-abcf-002a1940ca58"/>
+      </transition>
+      <transition id="skip_3">
+        <name>
+          <text>skip_3</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="41699b99-ff5e-480c-a27c-137863f8f1f7"/>
+      </transition>
+      <transition id="skip_11">
+        <name>
+          <text>skip_11</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="e1d700a9-c9cd-4674-bd10-7f900cdb9581"/>
+      </transition>
+      <transition id="close claim+start">
+        <name>
+          <text>close claim+start</text>
+        </name>
+      </transition>
+      <transition id="advise claimant on reimbursement+start">
+        <name>
+          <text>advise claimant on reimbursement+start</text>
+        </name>
+      </transition>
+      <transition id="incoming claim+complete">
+        <name>
+          <text>incoming claim+complete</text>
+        </name>
+      </transition>
+      <transition id="B register claim+complete">
+        <name>
+          <text>B register claim+complete</text>
+        </name>
+      </transition>
+      <transition id="B check if sufficient information is available+start">
+        <name>
+          <text>B check if sufficient information is available+start</text>
+        </name>
+      </transition>
+      <transition id="assess claim+complete">
+        <name>
+          <text>assess claim+complete</text>
+        </name>
+      </transition>
+      <transition id="skip_8">
+        <name>
+          <text>skip_8</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="96c0a731-f89f-43ba-8458-1f45b9a647c8"/>
+      </transition>
+      <transition id="close claim+complete">
+        <name>
+          <text>close claim+complete</text>
+        </name>
+      </transition>
+      <transition id="skip_4">
+        <name>
+          <text>skip_4</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="e3819ba3-21c5-4185-ab7b-6604345538eb"/>
+      </transition>
+      <transition id="skip_12">
+        <name>
+          <text>skip_12</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="2c636dba-b571-497d-a169-3854a5637162"/>
+      </transition>
+      <transition id="S check if sufficient information is available+start">
+        <name>
+          <text>S check if sufficient information is available+start</text>
+        </name>
+      </transition>
+      <transition id="advise claimant on reimbursement+complete">
+        <name>
+          <text>advise claimant on reimbursement+complete</text>
+        </name>
+      </transition>
+      <arc id="-9223371957131636476" source="p_17" target="advise claimant on reimbursement+complete"/>
+      <arc id="79723139336" source="advise claimant on reimbursement+complete" target="p_20"/>
+      <arc id="-9223371957131740535" source="S check if sufficient information is available+complete" target="p_5"/>
+      <arc id="-9223371957131630967" source="p_7" target="S register claim+complete"/>
+      <arc id="-9223371957131637237" source="p_11" target="determine likelihood of claim+start"/>
+      <arc id="79723144845" source="S register claim+complete" target="p_8"/>
+      <arc id="79723138575" source="determine likelihood of claim+start" target="p_12"/>
+      <arc id="79723139343" source="p_17" target="skip_16"/>
+      <arc id="-9223371957131636462" source="skip_16" target="p_16"/>
+      <arc id="79723139350" source="p_20" target="loop_13"/>
+      <arc id="-9223371957131630953" source="p_7" target="skip_5"/>
+      <arc id="-9223371957131637223" source="p_11" target="skip_9"/>
+      <arc id="-9223371957131636455" source="loop_13" target="p_15"/>
+      <arc id="79723035291" source="p_4" target="S check if sufficient information is available+complete"/>
+      <arc id="79723144859" source="skip_5" target="p_8"/>
+      <arc id="79723138589" source="skip_9" target="p_12"/>
+      <arc id="-9223371957131740514" source="p_3" target="skip_1"/>
+      <arc id="79723035298" source="skip_1" target="p_4"/>
+      <arc id="79723138722" source="p_15" target="initiate payment+start"/>
+      <arc id="79723139364" source="p_15" target="skip_17"/>
+      <arc id="-9223371957131637083" source="initiate payment+start" target="p_18"/>
+      <arc id="-9223371957131636441" source="skip_17" target="p_16"/>
+      <arc id="79723144873" source="p_8" target="B check if sufficient information is available+complete"/>
+      <arc id="79723138603" source="p_12" target="determine likelihood of claim+complete"/>
+      <arc id="-9223371957131630932" source="B check if sufficient information is available+complete" target="p_9"/>
+      <arc id="-9223371957131637202" source="determine likelihood of claim+complete" target="p_13"/>
+      <arc id="79723138736" source="p_15" target="skip_14"/>
+      <arc id="79723139378" source="p_16" target="end+start"/>
+      <arc id="-9223371957131637069" source="skip_14" target="p_18"/>
+      <arc id="-9223371957131631051" source="skip_2" target="p_5"/>
+      <arc id="-9223371957131636427" source="end+start" target="p_21"/>
+      <arc id="79723144887" source="p_8" target="skip_6"/>
+      <arc id="79723138617" source="p_12" target="skip_10"/>
+      <arc id="-9223371957131630918" source="skip_6" target="p_9"/>
+      <arc id="-9223371957131740549" source="p_3" target="S check if sufficient information is available+start"/>
+      <arc id="-9223371957131637188" source="skip_10" target="p_13"/>
+      <arc id="-9223371957131636420" source="p_21" target="end+complete"/>
+      <arc id="79723139392" source="end+complete" target="sink"/>
+      <arc id="-9223371957131637055" source="p_18" target="initiate payment+complete"/>
+      <arc id="79723138757" source="initiate payment+complete" target="p_19"/>
+      <arc id="-9223371957131630904" source="p_9" target="B register claim+start"/>
+      <arc id="-9223371957131631030" source="p_5" target="S register claim+start"/>
+      <arc id="-9223371957131637174" source="p_13" target="assess claim+start"/>
+      <arc id="79723144908" source="B register claim+start" target="p_10"/>
+      <arc id="79723138680" source="p_14" target="skip_12"/>
+      <arc id="79723144782" source="S register claim+start" target="p_6"/>
+      <arc id="79723138638" source="assess claim+start" target="p_14"/>
+      <arc id="-9223371957131637041" source="p_18" target="skip_15"/>
+      <arc id="79723138771" source="skip_15" target="p_19"/>
+      <arc id="-9223371957131636999" source="close claim+complete" target="p_20"/>
+      <arc id="-9223371957131630890" source="p_9" target="skip_7"/>
+      <arc id="-9223371957131631016" source="p_5" target="skip_3"/>
+      <arc id="-9223371957131637160" source="p_13" target="skip_11"/>
+      <arc id="79723144922" source="skip_7" target="p_10"/>
+      <arc id="-9223371957131637125" source="skip_12" target="p_15"/>
+      <arc id="79723144796" source="skip_3" target="p_6"/>
+      <arc id="79723035228" source="p_4" target="skip_2"/>
+      <arc id="79723138652" source="skip_11" target="p_14"/>
+      <arc id="79723138778" source="p_19" target="close claim+start"/>
+      <arc id="-9223371957131637027" source="close claim+start" target="p_17"/>
+      <arc id="-9223371957131637020" source="p_19" target="advise claimant on reimbursement+start"/>
+      <arc id="-9223371957131740570" source="source" target="incoming claim+complete"/>
+      <arc id="79723144936" source="p_10" target="B register claim+complete"/>
+      <arc id="79723138792" source="advise claimant on reimbursement+start" target="p_17"/>
+      <arc id="79723035242" source="incoming claim+complete" target="p_3"/>
+      <arc id="79723144810" source="p_6" target="B check if sufficient information is available+start"/>
+      <arc id="-9223371957131630869" source="B register claim+complete" target="p_11"/>
+      <arc id="-9223371957131630995" source="B check if sufficient information is available+start" target="p_7"/>
+      <arc id="79723138666" source="p_14" target="assess claim+complete"/>
+      <arc id="-9223371957131637139" source="assess claim+complete" target="p_15"/>
+      <arc id="79723144950" source="p_10" target="skip_8"/>
+      <arc id="79723138806" source="p_17" target="close claim+complete"/>
+      <arc id="79723144824" source="p_6" target="skip_4"/>
+      <arc id="-9223371957131630855" source="skip_8" target="p_11"/>
+      <arc id="-9223371957131630981" source="skip_4" target="p_7"/>
+      <arc id="79723035263" source="S check if sufficient information is available+start" target="p_4"/>
+    </page>
+  </net>
+</pnml>
