@@ -2,22 +2,42 @@ from django.shortcuts import render
 from .forms import UploadFileForm
 from django.http import HttpResponseRedirect
 import os
+import glob
 from django.core.files.storage import FileSystemStorage
 from pm4py.algo.discovery.alpha import factory as alpha_miner
 from pm4py.objects.log.importer.xes import factory as xes_importer
 from pm4py.visualization.petrinet import factory as vis_factory
 
+
 #handle input
 
 def handle_uploaded_file(f):
-	# os.remove('static/proc/model.png')
-	fs= FileSystemStorage()
-	fs.save('log.xes', f)
+
+    logPath2='/home/pm4py_test/logs/log.xes'
+    logPath1='/home/pm4py_test/media/log.xes'
+    # os.remove('static/proc/model.png')
+    fs= FileSystemStorage()
+    fs.save('log.xes', f)
+    move_file(logPath1,logPath2)
+
+    log = xes_importer.import_log(logPath2)
+    net, initial_marking, final_marking = alpha_miner.apply(log)
+    gviz = vis_factory.apply(net, initial_marking, final_marking)
+    vis_factory.view(gviz)
+    pngUris= glob.glob('/home/pm4py_test/*.png')
+    gvUris= glob.glob('/home/pm4py_test/*.gv')
+    modelUri='/home/pm4py_test/proc/static/proc/model.png'
+    print(pngUris)
+    print(gvUris)
+
+    os.remove(gvUris[0])
+    move_file(pngUris[0],modelUri)
+    
 
 	# get_model()
 
-def get_model():
-	os.rename("//home/ehsan/codes/pm4py-test/media/model.png", "/home/ehsan/codes/pm4py-test/proc/static/proc/model.png")
+def move_file(path1, path2):
+	os.rename(path1, path2)
 
 # views !!!
 
