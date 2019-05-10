@@ -10,5 +10,11 @@ logPath2=''
 log = xes_importer.import_log(logPath)
 net, initial_marking, final_marking = heuristics_miner.apply(log)
 gviz = vis_factory.apply(net, initial_marking, final_marking)
-vis_factory.view(gviz)
+try:
+    vis_factory.view(gviz)
+except:
+    print('gviz error !!!')
+
+
+print("well done !!!")
 
