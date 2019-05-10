@@ -69,7 +69,6 @@ def confirm_view(request):
 def upload_file_alpha(request):
 	if request.method == 'POST':
 	    form = UploadFileForm(request.POST, request.FILES)
-	    # get_model()
 	    if form.is_valid():
 	        handle_uploaded_file(request.FILES['file'],"alpha")
 	        return HttpResponseRedirect('/main/confirm/')
