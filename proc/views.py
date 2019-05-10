@@ -3,13 +3,16 @@ from .forms import UploadFileForm
 from django.http import HttpResponseRedirect
 import os
 from django.core.files.storage import FileSystemStorage
+from pm4py.algo.discovery.alpha import factory as alpha_miner
+from pm4py.objects.log.importer.xes import factory as xes_importer
+from pm4py.visualization.petrinet import factory as vis_factory
 
 #handle input
 
 def handle_uploaded_file(f):
 	# os.remove('static/proc/model.png')
 	fs= FileSystemStorage()
-	fs.save('model.xes', f)
+	fs.save('log.xes', f)
 
 	# get_model()
 
