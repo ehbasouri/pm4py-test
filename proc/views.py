@@ -9,7 +9,7 @@ from django.core.files.storage import FileSystemStorage
 def handle_uploaded_file(f):
 	# os.remove('static/proc/model.png')
 	fs= FileSystemStorage()
-	fs.save('model.png', f)
+	fs.save('model.xes', f)
 
 	# get_model()
 
