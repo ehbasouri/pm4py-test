@@ -69,19 +69,23 @@ def upload_file_alpha(request):
 def upload_file_inductive(request):
     if request.method == 'POST':
         form = UploadFileForm(request.POST, request.FILES)
+        # get_model()
         if form.is_valid():
             handle_uploaded_file(request.FILES['file'])
             return HttpResponseRedirect('/main/confirm/')
-        else:
-            form = UploadFileForm()                                     
-        return render(request, 'proc/uploadFile.html', { "form": form, "image": "proc/test.png" })
+    else:
+        # print('not valid !!!')
+        form = UploadFileForm()
+    return render(request, 'proc/uploadFile.html', { "form": form, "image": "proc/test.png" })
 
 def upload_file_heuristics(request):
     if request.method == 'POST':
         form = UploadFileForm(request.POST, request.FILES)
+        # get_model()
         if form.is_valid():
             handle_uploaded_file(request.FILES['file'])
             return HttpResponseRedirect('/main/confirm/')
-        else:
-            form = UploadFileForm()
-        return render(request, 'proc/uploadFile.html', { "form": form, "image": "proc/test.png" })
+    else:
+        # print('not valid !!!')
+        form = UploadFileForm()
+    return render(request, 'proc/uploadFile.html', { "form": form, "image": "proc/test.png" })
